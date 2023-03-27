@@ -14,7 +14,8 @@ public class wordReversal {
         Scanner keyborad = new Scanner(System.in);
         System.out.print("Write your phrase: ");
         String word = keyborad.nextLine();
-        String [] words = word.split(" ");
+        // Split the string by words by whitespace characters, ignoring zero or more occurrence of whitespace characters
+        String [] words = word.trim().split("\\s+");
 
         System.out.println("Your Reversal phrase is:");
         for (int i = words.length - 1; i >= 0; i--){
