@@ -22,6 +22,4 @@ public class findTheWord {
     public static void main (String[]args){
         printWordFromPositionN(wordReversal.getWordsFromKeyboard(),getIntFromKeyboard());
     }
-
-
 }
