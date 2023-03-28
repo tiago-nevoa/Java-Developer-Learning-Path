@@ -10,18 +10,22 @@ After you’ve solved this challenge, try adding sentence capitalization and pun
 So, the string “Codecademy is the best!” should output as “Best the is Codecademy!”
  */
 public class wordReversal {
-    public static void main (String[]args){
-        Scanner keyborad = new Scanner(System.in);
+    public static String [] getWordsFromKeyboard() {
+        Scanner keyboard = new Scanner(System.in);
         System.out.print("Write your phrase: ");
-        String word = keyborad.nextLine();
+        String word = keyboard.nextLine();
+        keyboard.close();
         // Split the string by words by whitespace characters, ignoring zero or more occurrence of whitespace characters
         String [] words = word.trim().split("\\s+");
-
+        return words;
+    }
+    public static void printReversal (String [] words){
         System.out.println("Your Reversal phrase is:");
         for (int i = words.length - 1; i >= 0; i--){
             System.out.print(words[i] + " ");
         }
-        keyborad.close();
     }
-
+    public static void main (String[]args){
+        printReversal(getWordsFromKeyboard());
+    }
 }
